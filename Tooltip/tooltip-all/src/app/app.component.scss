@@ -1,0 +1,739 @@
+// spnan
+span{
+  padding: 10px 20px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+#tooltip{
+  
+  position:relative;
+  text-align:left;
+}
+
+#tooltip .top {
+  min-width:200px; 
+  top:-20px;
+  left:50%;
+  transform:translate(-50%, -100%);
+  padding:10px 20px;
+  color:#444444;
+  background-color:#EEEEEE;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:9;
+  box-sizing:border-box;
+  border:1px solid #810a0a;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  display:none;
+}
+
+#tooltip:hover .top {
+  display:block;
+}
+
+#tooltip .top i { 
+  position:absolute;
+  top:100%;
+  left:50%;
+  margin-left:-12px;
+  width:24px;
+  height:12px;
+  overflow:hidden;
+}
+
+#tooltip .top i::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(45deg);
+  background-color:#EEEEEE;
+  border:1px solid #810a0a;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+#tooltip2 {
+  position: relative;
+  padding:10px 20px;
+
+  
+}
+
+#tooltip2 .tooltiptext {
+  min-width:200px; 
+  visibility: hidden;
+  position: absolute;
+  bottom:-125%;
+  left:-55%;
+  padding: .5rem;
+  border-radius: 1rem;
+  width:max-content;
+  background-color:#EEEEEE;
+  box-shadow: 1px 1px 15px 1px rgb(10, 188, 201);
+  color:rgb(24, 71, 5);
+  z-index: 1;
+  transition: .4s ease;
+ transform:scale(0);
+}
+
+#tooltip2 .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: -27%;
+  left:43%;
+  margin-right: 5px;
+  border-width: 15px ;
+  border-style: solid;
+  border-color:transparent transparent rgb(10, 188, 201) transparent ;
+}
+
+#tooltip2:hover .tooltiptext {
+  visibility:visible ;
+  transform: scale3d(.8, .8,.8)translate(0, 75%);
+}
+
+#tooltip2:hover{
+  color:white;
+}
+
+// Hello Component css
+p {
+  font-family: Lato;
+}
+
+//custom tooltip 2
+body {
+  font-family: calibri;
+  font-size: small;
+}
+.flex-container {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 10px;
+  padding-bottom: 45px;
+}
+.flex-container > div  {
+  color: black;
+  border: 1px solid blue;
+  padding:10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.tt {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.tttext {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  transition: opacity 2s;
+}
+.tt:hover .tttext {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* positioning the tooltiptexts */
+.top1 .tttext {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+}
+.bottom1 .tttext {
+  top: 155%;
+  left: 50%;
+  margin-left: -75px;
+}
+.left1 .tttext {
+  right: 120%;
+  top: -5px;
+}
+.right1 .tttext {
+  left: 120%;
+  top: -5px;
+}
+
+/* tooltip arrows */
+.tttext::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.top1 .tttext::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+.bottom1 .tttext::after {
+  bottom: 100%;
+  left: 50%;
+  border-color: transparent transparent darkorange transparent;
+}
+.left1 .tttext::after {
+  left: 100%;
+  top: 50%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent darkorange;
+}
+.right1 .tttext::after {
+  right: 100%;
+  top: 50%;
+  margin-top: -5px;
+  border-color: transparent darkorange transparent transparent;
+}
+//second line-first button
+.tt2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext2 {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  
+}
+.tt2:hover .tttext2 {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(3em,0);
+  -moz-transform: translate(3em,0);
+  -o-transform: translate(3em,0);
+  -ms-transform: translate(3em,0);
+  transform: translate(3em,0);
+  
+}
+.top2 .tttext2 {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext2::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.top2 .tttext2::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//second line-third button
+.tt3 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext3 {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-out;
+  
+}
+.tt3:hover .tttext3 {
+  opacity: 1;
+  visibility: visible;
+// box-shadow: 5px 5px 8px rgb(240, 185, 5), 10px 10px 8px rgb(221, 236, 8), 15px 15px 8px green;
+}
+.bottom3 .tttext3 {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext3::after {
+  content: "";
+  position: absolute;
+  border-width: 7px;
+  border-style: solid;
+}
+.bottom3 .tttext3::after {
+  top: 100%;
+  left: 45%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//second line-forth button
+.tt4 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext4 {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  
+}
+.tt4:hover .tttext4 {
+
+    visibility:visible;
+    opacity: 1;
+    transition:2s linear;
+    animation: myfirst 4s infinite;
+}
+
+
+    @keyframes myfirst {
+     
+      0%   {transform:rotate(0deg);}
+      
+      10%  {transform:rotate(20deg);}
+      20%  {transform:rotate(-20deg);}
+      30%   {transform:rotate(20deg);}
+      40%   {transform:rotate(-20deg);}
+      50%   {transform:rotate(20deg);}
+      60%   {transform:rotate(-20deg);}
+      70%   {transform:rotate(20deg);}
+      80%   {transform:rotate(-20deg);}
+      90%   {transform:rotate(20deg);}
+      100%   {transform:rotate(0deg);}
+    }
+    
+  
+
+.bottom4 .tttext4 {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext4::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.bottom4 .tttext4::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//second line-fifth button
+.tt5 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext5 {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  animation-name: rotateccw; 
+  animation-duration: 3s;
+  
+}
+.tt5:hover .tttext5 {
+
+    visibility:visible;
+    opacity: 1;
+  
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotatecw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+.bottom5 .tttext5 {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext5::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.bottom5 .tttext5::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//third line-sixth button
+.tt6 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext6 {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  transform: translate3d(0,40px,0);
+  transition: all .5s ease-in-out;
+   
+}
+.tt6:hover .tttext6 {
+
+    visibility:visible;
+    opacity: 1;
+    transform: scale3d(1,1,1);
+    transition: all .7s .1s ease-in-out;
+}
+
+.bottom6 .tttext6 {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext6::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.bottom6 .tttext6::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//third line-seven button
+.tt7 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext7 {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  transform: translate3d(0,30px,0) rotate3d(0,0,1,60deg);
+  transition: transform .15s ease-in-out, opacity .2s;
+   
+}
+.tt7:hover .tttext7 {
+
+    visibility:visible;
+    opacity: 1;
+    transform: translate3d(0,0,0) rotate3d(1,1,1,0deg);
+}
+
+.bottom7 .tttext7 {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext7::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.bottom7 .tttext7::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//third line-Eight button
+.tt8 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext8 {
+  position: absolute;
+  width: 150px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  transition: all .65s cubic-bezier(.84,-0.18,.31,1.26), opacity .65s .5s;
+  transform:  scale(.6) translateY(-90%);
+   
+}
+.tt8:hover .tttext8 {
+
+    visibility:visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all .55s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+}
+
+
+.bottom8 .tttext8 {
+  bottom: 155%;
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext8::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.bottom8 .tttext8::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//third line-nine button
+.tt9 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext9 {
+  position: absolute;
+  width: 200px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  transform: translate3d(0,40px,0);
+  transition: all .5s ease-in-out;
+   
+}
+.tt9:hover .tttext9 {
+
+    visibility:visible;
+    opacity: 1;
+    transform: scale3d(1,1,1);
+    transition: all .7s .1s ease-in-out;
+   
+}
+
+
+.bottom9 .tttext9 {
+  bottom: 165%;
+  left: 30%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext9::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+.bottom9 .tttext9::after {
+  top: 100%;
+  left: 50%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+//forth line-ten button
+.bottom10{
+  position: relative;
+  padding:15px 45px;
+  border-radius: 5px;
+  border:1px solid blue;
+  background-color: white;
+  left:0;
+ }
+.tttext10{
+    visibility: hidden;
+    position: absolute;
+    top: 20%;
+    left:-60%;
+    padding: 50px;
+    border-style:none;
+    width:max-content;
+    color:black;
+    z-index: 1;
+    transition: .5s ease-in-out;
+    transform:scale(0);
+    opacity:0;
+  }
+.far p{
+  position:absolute;
+  top:40%;
+  left:21%;
+  font-size: 1rem;
+}
+.bottom10:hover .tttext10{
+    visibility:visible ;
+    transform: scale3d(1.1, 1.0,.5)translate(10%, -100%);
+    opacity:5;
+  
+}
+.bottom10:hover{
+   color:black;
+}
+
+//forth line-eleven button
+.tt11 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.tttext11 {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: darkorange;
+  padding: 5px 0;
+  border-radius: 30px;
+  visibility: hidden;
+  z-index: 1;
+  /* for transition effect */
+  opacity: 0;
+  transform:  scale(.60) translateY(-10%);
+   
+}
+.tt11:hover .tttext11 {
+
+    visibility:visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all .55s cubic-bezier(.84,-0.18,.31,1.26);
+}
+
+
+.bottom11 .tttext11 {
+  bottom: 155%;
+  left: 125%;
+  margin-left: -75px;
+
+}
+
+
+/* tooltip arrows */
+.tttext11::after {
+  content: "";
+  position: absolute;
+  border-width: 6px;
+  border-style: solid;
+}
+.bottom11 .tttext11::after {
+  top: 100%;
+  left: 20%;
+  border-color: darkorange transparent transparent transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

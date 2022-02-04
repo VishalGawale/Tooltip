@@ -1,0 +1,228 @@
+<h2>NgB toolpit</h2>
+<button type="button" class="btn btn-outline-primary mr-5" placement="top" ngbTooltip="Tooltip on top">
+  Tooltip on top
+</button>
+<br><br>
+<div class="row">
+  <div class="col-xs-12" style="margin:5% 0 0 5%;">
+    <button type="button" class="btn btn-outline-primary mr-5" placement="top" ngbTooltip="Tooltip on top">
+      Tooltip on top
+    </button>
+    
+    <button type="button" class="btn btn-outline-primary mr-5" placement="right" ngbTooltip="Tooltip on right">
+      Tooltip on right
+    </button>
+    
+    <button type="button" class="btn btn-outline-primary mr-5" placement="bottom" ngbTooltip="Tooltip on bottom">
+      Tooltip on bottom
+    </button>
+    
+    <button type="button" class="btn btn-outline-primary mr-5" placement="left" ngbTooltip="Tooltip on left">
+      Tooltip on left
+    </button>
+
+    <span tooltip="Tooltip" placement="top" >Tooltip on top</span>
+ 
+    
+  </div>
+</div>
+<br>
+<h2>Customize Tooltip</h2>
+<div class="btn btn-outline-primary" id="tooltip" style="margin:1% 0 0 20%;"> Catch
+  <div class="top">
+    <h3>Catch me !</h3>
+    <i></i>
+    <img src="../assets/smile.gif">
+  </div>
+</div>
+
+<div class="btn btn-outline-primary" id="tooltip2" style="margin:1% 0 0 20%;"> Catch 2
+  <div class="top">
+
+    <span class="tooltiptext">
+      <h2>Hey I'am</h2><br>Tooltip Ok!
+    </span>
+  </div>
+</div>
+
+<!-- custom toolpit 2 -->
+<div class="flex-container">
+  <div class="top1">
+    <div class="tt">
+      Hover over me
+      <span class="tttext">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+
+  <div class="right1">
+    <div class="tt">
+      Hover over me
+      <span class="tttext">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+  
+  <div class="bottom1">
+    <div class="tt">
+      Hover over me
+      <span class="tttext">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+  
+  <div class="left1">
+    <div class="tt">
+      Hover over me
+      <span class="tttext">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- second line -->
+
+<div class="flex-container">
+  <!-- first button -->
+  <div class="top2">
+    <div class="tt2">
+      Hover over me
+      <span class="tttext2">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+
+  <!-- third button -->
+  <div class="bottom3">
+    <div class="tt3">
+      Hover over me
+      <span class="tttext3">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+  
+  <!-- forth button -->
+  <div class="bottom4">
+    <div class="tt4">
+      Hover over me
+      <span class="tttext4">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+  
+  <!-- fifth button -->
+  <div class="bottom5">
+    <div class="tt5">
+      Hover over me
+      <span class="tttext5">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- third-line -->
+<div class="flex-container">
+  <!-- first button -->
+  <div class="bottom6">
+    <div class="tt6">
+      Hover over me
+      <span class="tttext6">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+
+  <!-- second button -->
+  <div class="bottom7">
+    <div class="tt7">
+      Hover over me
+      <span class="tttext7">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+  
+  <!-- third button -->
+  <div class="bottom8">
+    <div class="tt8">
+      Hover over me
+      <span class="tttext8">
+        Tooltip Text
+      </span>
+    </div>
+  </div>
+  
+  <!-- forth button -->
+  <div class="bottom9">
+    <div class="tt9">
+      Hover over me
+      <span class="tttext9" >
+        <img src="../assets/DP.PNG" style="width: 200px; height: 200px;">
+       That's My Dp 
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- forth-line -->
+<div class="flex-container">
+  <!-- first button -->
+  <button class="bottom10">
+  Hover me
+  <span class="tttext10"><i style='font-size:200px' class='far'>&#xf27a;<p>Task List</p></i></span>
+</button>
+
+  <!-- second button -->
+  <div class="bottom11">
+    <div class="tt11">
+      Hover over me
+      <span class="tttext11">
+        hey<h2>Catch me</h2>
+      </span>
+    </div>
+  </div>
+  
+  <!-- third button -->
+  <!-- <div class="bottom12">
+    <div class="tt12">
+      Hover over me
+      <span class="tttext12">
+        Tooltip Text
+      </span>
+    </div>
+  </div> -->
+  
+  <!-- forth button -->
+  <!-- <div class="bottom13">
+    <div class="tt13">
+      Hover over me
+      <span class="tttext13" >
+        <i style='font-size:24px' class='far'>&#xf27a;</i>
+       That's My Dp 
+      </span>
+    </div>
+  </div> -->
+</div>
+<h2>Hello Component Toolpiyt</h2>
+<hello title="{{ title}}"></hello>
+<p>
+  Tooltips can contain any arbitrary HTML, Angular bindings and even directives!
+  Simply enclose desired content in a <code>ng-template</code> element.
+</p>
+
+<ng-template #tipContent>hey hello, <b>{{title}}</b>!</ng-template>
+<button type="button" 
+        class="btn btn-outline-primary" 
+        [ngbTooltip]="tipContent"
+        style="margin-left:5%;">
+ Markup And Binding in Tooltip.
+</button>
+
